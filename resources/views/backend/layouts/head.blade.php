@@ -1,19 +1,17 @@
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Admin Dashboard | Bibit Sriwedari</title>
-<!-- plugins:css -->
-<link rel="stylesheet" href="{{asset('backend/vendors/feather/feather.css')}}">
-<link rel="stylesheet" href="{{asset('backend/vendors/ti-icons/css/themify-icons.css')}}">
-<link rel="stylesheet" href="{{asset('backend/vendors/css/vendor.bundle.base.css')}}">
-<!-- endinject -->
-<!-- Plugin css for this page -->
-{{-- <link rel="stylesheet" href="{{asset('backend/vendors/datatables.net-bs4/dataTables.bootstrap4.css')}}"> --}}
-<link rel="stylesheet" href="{{asset('backend/vendors/ti-icons/css/themify-icons.css')}}">
-<link rel="stylesheet" href="{{asset('backend/vendors/mdi/css/materialdesignicons.min.css')}}">
-{{-- <link rel="stylesheet" type="text/css" href="{{asset('backend/js/select.dataTables.min.css')}}"> --}}
-<!-- End plugin css for this page -->
-<!-- inject:css -->
-<link rel="stylesheet" href="{{asset('backend/css/vertical-layout-light/style.css')}}">
-<!-- endinject -->
-<link rel="shortcut icon" href="{{asset('backend/images/favicon.png')}}" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bibit Sriwedari - Admin Dashboard</title>
+
+<link rel="stylesheet" href="{{ asset('backend/assets/css/main/app.css') }}">
+<link rel="stylesheet" href="{{ asset('backend/assets/css/main/app-dark.css') }}">
+<link rel="shortcut icon" href="{{ asset('backend/assets/images/logo/favicon.svg') }}" type="image/x-icon">
+<link rel="shortcut icon" href="{{ asset('backend/assets/images/logo/favicon.png') }}" type="image/png">
+
+<link rel="stylesheet" href="{{ asset('backend/assets/css/shared/iconly.css') }}">
+
+<link rel="stylesheet" href="{{asset('backend/assets/extensions/simple-datatables/style.css')}}">
+<link rel="stylesheet" href="{{asset('backend/assets/css/pages/simple-datatables.css')}}">
+
+<link rel="stylesheet" href="{{asset('backend/assets/css/pages/summernote.css')}}">
+<link rel="stylesheet" href="{{asset('backend/assets/extensions/summernote/summernote-lite.css')}}">
+

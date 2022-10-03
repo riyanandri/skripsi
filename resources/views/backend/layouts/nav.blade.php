@@ -1,98 +1,102 @@
-<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-      <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="{{asset('backend/images/logo.svg')}}" class="mr-2" alt="logo"/></a>
-      <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('backend/images/logo-mini.svg')}}" alt="logo"/></a>
-    </div>
-    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-      <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-        <span class="icon-menu"></span>
-      </button>
-      <ul class="navbar-nav mr-lg-2">
-        <li class="nav-item nav-search d-none d-lg-block">
-          <div class="input-group">
-            <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
-              <span class="input-group-text" id="search">
-                <i class="icon-search"></i>
-              </span>
-            </div>
-            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
-          </div>
-        </li>
-      </ul>
-      <ul class="navbar-nav navbar-nav-right">
-        <li class="nav-item dropdown">
-          <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-            <i class="icon-bell mx-0"></i>
-            <span class="count"></span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-            <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
-            <a class="dropdown-item preview-item">
-              <div class="preview-thumbnail">
-                <div class="preview-icon bg-success">
-                  <i class="ti-info-alt mx-0"></i>
-                </div>
-              </div>
-              <div class="preview-item-content">
-                <h6 class="preview-subject font-weight-normal">Application Error</h6>
-                <p class="font-weight-light small-text mb-0 text-muted">
-                  Just now
-                </p>
-              </div>
-            </a>
-            <a class="dropdown-item preview-item">
-              <div class="preview-thumbnail">
-                <div class="preview-icon bg-warning">
-                  <i class="ti-settings mx-0"></i>
-                </div>
-              </div>
-              <div class="preview-item-content">
-                <h6 class="preview-subject font-weight-normal">Settings</h6>
-                <p class="font-weight-light small-text mb-0 text-muted">
-                  Private message
-                </p>
-              </div>
-            </a>
-            <a class="dropdown-item preview-item">
-              <div class="preview-thumbnail">
-                <div class="preview-icon bg-info">
-                  <i class="ti-user mx-0"></i>
-                </div>
-              </div>
-              <div class="preview-item-content">
-                <h6 class="preview-subject font-weight-normal">New user registration</h6>
-                <p class="font-weight-light small-text mb-0 text-muted">
-                  2 days ago
-                </p>
-              </div>
-            </a>
-          </div>
-        </li>
-        <li class="nav-item nav-profile dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-            <img src="{{asset('backend/images/faces/face28.jpg')}}" alt="profile"/>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-            <a class="dropdown-item">
-              <i class="ti-settings text-primary"></i>
-              Settings
-            </a>
-            <a class="dropdown-item">
-              <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
-                    <i class="ti-power-off text-primary"></i>
-                    Logout
-              </a>
+<header class='mb-3'>
+    <nav class="navbar navbar-expand navbar-light navbar-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-lg-0">
+                    <li class="nav-item dropdown me-1">
+                        <a class="nav-link active dropdown-toggle text-gray-600" href="#"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class='bi bi-envelope bi-sub fs-4'></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li>
+                                <h6 class="dropdown-header">Mail</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">No new mail</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown me-3">
+                        <a class="nav-link active dropdown-toggle text-gray-600" href="#"
+                            data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            <i class='bi bi-bell bi-sub fs-4'></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end notification-dropdown"
+                            aria-labelledby="dropdownMenuButton">
+                            <li class="dropdown-header">
+                                <h6>Notifications</h6>
+                            </li>
+                            <li class="dropdown-item notification-item">
+                                <a class="d-flex align-items-center" href="#">
+                                    <div class="notification-icon bg-primary">
+                                        <i class="bi bi-cart-check"></i>
+                                    </div>
+                                    <div class="notification-text ms-4">
+                                        <p class="notification-title font-bold">Successfully check out</p>
+                                        <p class="notification-subtitle font-thin text-sm">Order ID #256
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="dropdown-item notification-item">
+                                <a class="d-flex align-items-center" href="#">
+                                    <div class="notification-icon bg-success">
+                                        <i class="bi bi-file-earmark-check"></i>
+                                    </div>
+                                    <div class="notification-text ms-4">
+                                        <p class="notification-title font-bold">Homework submitted</p>
+                                        <p class="notification-subtitle font-thin text-sm">Algebra math
+                                            homework</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <p class="text-center py-2 mb-0"><a href="#">See all
+                                        notification</a></p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="user-menu d-flex">
+                            <div class="user-name text-end me-3">
+                                <h6 class="mb-0 text-gray-600">Riyan</h6>
+                                <p class="mb-0 text-sm text-gray-600">Administrator</p>
+                            </div>
+                            <div class="user-img d-flex align-items-center">
+                                <div class="avatar avatar-md">
+                                    <img src="{{asset('backend/assets/images/faces/1.jpg')}}">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton"
+                        style="min-width: 11rem;">
+                        <li>
+                            <h6 class="dropdown-header">Hello, Riyan!</h6>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-person me-2"></i> My
+                                Profile</a></li>
+                        <li>
+                            <a class="dropdown-item">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    <i class="icon-mid bi bi-box-arrow-left me-2"></i> Logout
+                                </a>
 
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                 @csrf
-              </form>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-        <span class="icon-menu"></span>
-      </button>
-    </div>
-  </nav>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
